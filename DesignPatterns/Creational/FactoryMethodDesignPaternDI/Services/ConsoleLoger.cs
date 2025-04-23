@@ -3,7 +3,7 @@ public class ConsoleLoger: ILoger
 {
 	public void Log(string message)
 	{
-		Console.WriteLine(message);
+		Console.WriteLine($"Writing to console: {message}");
 	}
 }
 

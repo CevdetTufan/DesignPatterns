@@ -34,6 +34,7 @@ var reportService = serviceProvider.GetRequiredService<ReportService>();
 reportService.GenerateReport("Sales");
 
 var notificationService = serviceProvider.GetRequiredService<NotificationService>();
+notificationService.Notify("This is a log message", LogType.Console);
 notificationService.Notify("This is a log message", LogType.File);
 
 Console.ReadLine();
