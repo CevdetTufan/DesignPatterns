@@ -11,8 +11,18 @@ services.AddTransient<ILogFactory, LogFactoryService>();
 
 services.AddTransient<Func<LogType, ILoger>>(sp => loggerType =>
 {
-	var factory = sp.GetRequiredService<ILogFactory>();
-	return factory.CreateLoger(loggerType);
+	//var factory = sp.GetRequiredService<ILogFactory>();
+	//return factory.CreateLoger(loggerType);
+
+	//This is a simplified version of the factory method pattern via delegate
+	//It allows you to create different types of loggers based on the LogType enum
+	//without needing to implement a separate factory class.
+	return loggerType switch
+	{
+		LogType.Console => sp.GetRequiredService<ConsoleLoger>(),
+		LogType.File => sp.GetRequiredService<FileLoger>(),
+		_ => throw new ArgumentException("Invalid log type", nameof(loggerType)),
+	};
 });
 
 services.AddTransient<ReportService>();
