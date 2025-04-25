@@ -13,11 +13,7 @@ DesignPatterns.sln
 │   │   └── SingletonDesignPattern
 │   └── Visual Studio 2022/Visualizers
 └── .gitignore
-```  
-
-- **DesignPatterns.sln**: Solution file containing all projects.  
-- **Creational**: Sample projects demonstrating GoF creational patterns.  
-- **Visualizers**: Visual Studio visualizer configurations (optional extras).  
+```
 
 ## Creational Patterns
 
