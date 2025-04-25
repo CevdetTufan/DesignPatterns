@@ -1,4 +1,12 @@
-﻿using FactoryMethodDesignPaternDI;
+﻿
+/*
+ * Facatory Design Pattern Dependency Injection
+ * Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+ * 
+ * Delegate Factory Method is a simplified version of the factory method pattern via delegate
+ */
+
+using FactoryMethodDesignPaternDI;
 using FactoryMethodDesignPaternDI.Factories;
 using FactoryMethodDesignPaternDI.Services;
 using Microsoft.Extensions.DependencyInjection;
